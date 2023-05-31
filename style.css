@@ -24,6 +24,7 @@ body * {
 #container {
   width: 360px;
   margin: 56px auto 0px;
+  padding: 0 24px;
 }
 
 #profile {
@@ -39,4 +40,68 @@ body * {
   font-weight: 500;
   line-height: 24px;
   margin-top: 8px;
+}
+
+/* Links */
+
+ul {
+  list-style: none;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+ul li a {
+  padding: 16px 24px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  height: 56px;
+
+  /* O flex faz com que o conteúdo seja preenchido na linha da "caixa"*/
+  display: flex;
+  /* O justify-content alinha o conteúdo do link no eixo Y */
+  justify-content: center;
+  /* O align-items alinha o conteúdo do link no eixo X */
+  align-items: center;
+  /* Faz as bordas ficarem arredondadas */
+  border-radius: 8px;
+  /* Adiciona um blur no espaço da "caixa" do botão */
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  /* Remove o sublinhado do link ("a") */
+  text-decoration: none;
+
+  transition: background 0.2s;
+}
+
+ul li a:hover {
+  border: 1.5px solid rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px 0;
+  font-size: 24px;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+}
+
+#social-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transition: background 0.5s;
+}
+
+#dark-mode {
+  height: 40px;
 }
